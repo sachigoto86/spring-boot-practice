@@ -5,8 +5,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>title</h1>
-
+	<!-- model で設定したものがここで反映される。タブの中に定数を入れるという感じ
+	thymeleafがつかえる環境下でなければ、反映されないので、タグのそとの値が反映される -->
+	
+<h1 th:text="${title}">title</h1>
+<p th:text="${name}"> name </p>
+<p th:text="${email}">email</p>
 <!-- These are links to use for next lessons -->
 <!-- こちらは後で使用されるリンクです -->
 <p><a href="#" th:href="@{/inquiry}">Inquiry</a></p>
