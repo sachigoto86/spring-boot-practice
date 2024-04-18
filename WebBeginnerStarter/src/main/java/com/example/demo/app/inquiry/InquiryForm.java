@@ -19,6 +19,7 @@ public class InquiryForm{
 		this.contents = contents;
 	}
 
+    // using @ to add validation 
 	@Size(min = 1, max = 20, message="Please input 20 characters or less")
     private String name;
     
