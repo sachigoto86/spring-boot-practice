@@ -8,7 +8,8 @@
 <body>
 <h1 th:text="${title}">仮のタイトル</h1>
 <p>入力内容をご確認ください</p>
-<p th:text="${inquiryForm.name}"></p>
+
+<!-- 以下このDivで囲われた部分は*{}が使える -->
 <div th:object="${inquiryForm}">
 <p th:text="*{name}"></p>
 <p th:text="*{email}"></p>

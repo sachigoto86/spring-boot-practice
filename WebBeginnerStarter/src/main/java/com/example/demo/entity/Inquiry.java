@@ -15,7 +15,6 @@ public class Inquiry {
 	public Inquiry() {}
 	
 	public Inquiry(int id, String name, String email, String contents, LocalDateTime created) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.email = email;
