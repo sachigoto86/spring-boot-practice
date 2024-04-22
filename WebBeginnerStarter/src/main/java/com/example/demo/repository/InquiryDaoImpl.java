@@ -26,11 +26,12 @@ public class InquiryDaoImpl implements InquiryDao{
 	}
 	
 //  This method is used in the latter chapter
-//	@Override
-//	public int updateInquiry(Inquiry inquiry) {
-//		return jdbcTemplate.update("UPDATE inquiry SET name = ?, email = ?,contents = ? WHERE id = ?",
-//				 inquiry.getName(), inquiry.getEmail(), inquiry.getContents(), inquiry.getId() );	
-//	}
+	@Override
+	public int updateInquiry(Inquiry inquiry) {
+		//idが見つからないと０、問題なく見つけれれば１が返ってくる
+		return jdbcTemplate.update("UPDATE inquiry SET name = ?, email = ?,contents = ? WHERE id = ?",
+				 inquiry.getName(), inquiry.getEmail(), inquiry.getContents(), inquiry.getId() );	
+	}
 
 	@Override
 	public List<Inquiry> getAll() {
